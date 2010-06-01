@@ -1,0 +1,167 @@
+/******************************
+* Reset jQuery Widget Styling
+******************************/
+
+/* Component containers
+----------------------------------*/
+#template_variables .ui-widget { font-family: inherit; font-size: inherit; }
+#template_variables .ui-widget input, #template_variables .ui-widget select, #template_variables .ui-widget textarea, #template_variables .ui-widget button { font-family: inherit; font-size: inherit; }
+#template_variables .ui-widget-content { border: none; background: none; color: inherit; }
+#template_variables .ui-widget-content ul { margin: 0; }
+#template_variables .ui-widget-content a { color: inherit; }
+#template_variables .ui-widget-header { border: none; background: none; color: inherit; }
+#template_variables .ui-widget-header a { color: #ffffff; }
+
+/* Interaction states
+----------------------------------*/
+#template_variables .ui-state-default, #template_variables .ui-widget-content .ui-state-default { border: none; background: none; font-weight: inherit; color: inherit; }
+#template_variables .ui-state-default a, #template_variables .ui-state-default a:link, #template_variables .ui-state-default a:visited { color: inherit; text-decoration: inherit; }
+#template_variables .ui-state-hover, #template_variables .ui-widget-content .ui-state-hover, #template_variables .ui-state-focus, #template_variables .ui-widget-content .ui-state-focus { border: none; background: none; font-weight: inherit; color: inherit; }
+#template_variables .ui-state-hover a, #template_variables .ui-state-hover a:hover { color: inherit; text-decoration: inherit; }
+#template_variables .ui-state-active, #template_variables .ui-widget-content .ui-state-active { border: none; background: none; font-weight: bold; color: inherit; }
+#template_variables .ui-state-active a, #template_variables .ui-state-active a:link, #template_variables .ui-state-active a:visited { color: inherit; text-decoration: inherit; }
+	
+/* Tabs
+----------------------------------*/
+#template_variables .ui-tabs { padding: 0; }
+#template_variables .ui-tabs .ui-tabs-nav { list-style: none; position: relative; padding: 0; margin: 0; }
+#template_variables .ui-tabs .ui-tabs-nav li { position: relative; float: none; border-bottom-width: 0 !important; margin: 0; padding: 0; }
+#template_variables .ui-tabs .ui-tabs-nav li a { float: none; text-decoration: inherit; padding: 0; }
+#template_variables .ui-tabs .ui-tabs-nav li.ui-tabs-selected { padding: 0; border-bottom-width: 0; }
+#template_variables .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, #template_variables .ui-tabs .ui-tabs-nav li.ui-state-disabled a, #template_variables .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+#template_variables .ui-tabs .ui-tabs-nav li a, #template_variables .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } 
+#template_variables .ui-tabs .ui-tabs-panel { padding: 0; margin: 0px; display: block; border-width: 0; background: none; }
+#template_variables .ui-tabs .ui-tabs-hide { display: none !important; }
+
+#template_variables .ui-corner-top { -moz-border-radius-topleft: 0; -webkit-border-top-left-radius: 0; -moz-border-radius-topright: 0; -webkit-border-top-right-radius: 0; }
+
+/******************************
+* Accessory Styling
+******************************/
+
+/* Tabs
+----------------------------------*/
+#template_variables .ui-tabs .ui-tabs-nav { float: left; margin: 0 20px 20px 0;}
+#template_variables .ui-tabs .ui-tabs-panel { float: left; }
+#template_variables  .ui-tabs .ui-tabs-nav .ui-tabs-selected { }
+	#template_variables .ui-tabs .ui-tabs-nav .ui-tabs-selected a { 
+		background-color: #222a2e;	
+		border-top: 1px solid #445058;
+		border-bottom: 1px solid #445058;	
+		color: #fff;
+		padding:6px 12px 5px;
+	}
+
+#template_variables  .ui-tabs .ui-tabs-nav li {
+	background: #151c21;
+	border-left:4px solid #2D383E;
+	display:block;
+	padding: 0;
+}
+	#template_variables  .ui-tabs .ui-tabs-nav li a {
+		color:#929596;
+		display:block;
+		font-size: 12px;
+		font-weight:bold;
+		padding:7px 12px 6px;
+	}
+		#template_variables  .ui-tabs .ui-tabs-nav li a:hover { color: #f5f5f5; background-color: #222a2e;}
+
+/* Heading
+----------------------------------*/
+#template_variables h3.section-heading {
+	background: rgb(27,36,42);	
+	border-bottom: 1px solid #445058;
+	color:#929596;
+	font-size:13px;
+	font-weight:bold;
+	line-height:18px;
+	padding:9px 8px;
+	display: block;
+}
+	#template_variables h3.section-heading span { color: #fff; }
+
+/* Links
+----------------------------------*/
+#template_variables a.copy {
+	display: block;
+	float: left;
+	margin: 3px 0;
+	padding: 0 6px;
+	height: 22px;
+	line-height: 22px;
+	background: #27343C url(/themes/cp_themes/default/images/backgrounds_sprite.png) repeat-x 0px -79px;
+	text-decoration: none;
+	font-size: 12px;
+	text-shadow:0 1px 1px #000000;
+	position: relative;
+}
+	#template_variables a.copy.hover { color: #fff; }
+	#template_variables a.copy.active { color: #fff; background-color: #E11842; background-image: none; }
+	
+	#template_variables .clipTip { 
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		padding: 0 8px 0 16px;
+		margin: 0 0 0 3px;
+		height: 20px;
+		line-height: 20px;
+		text-decoration: uppercase;
+		font-size: 11px;
+		text-decoration: uppercase;
+		background: #E11842;
+		/*border: 1px solid #445058;*/
+		white-space: nowrap;
+	}	
+		#template_variables a.copy.hover .clipTip { display: block; }
+		span.arrow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 0px; line-height: 0%; width: 0px;
+			border-top: 10px solid #1B242A;
+			border-right: 10px solid #E11842;
+			border-bottom: 10px solid #1B242A;
+		}
+
+/* Tables
+----------------------------------*/
+#template_variables table { margin-bottom: 20px; }
+#template_variables .customFieldTable { max-width: 380px; }
+
+	#template_variables th {
+		background: rgb(21,28,33);
+		background: rgba(0,0,0,0.4);
+		color: #EEE;
+		color: rgba(255,255,255,0.85);
+		border-bottom: 1px solid #445058;		
+		font-weight: bold;
+		padding: 8px 8px 6px;
+		text-align: left;
+		text-shadow: 0 1px 1px #000;
+		cursor: pointer;
+		text-shadow:0 1px 1px #000000;	
+		white-space: nowrap;
+	}
+		#template_variables th.no-sort { cursor: default; }
+
+	#template_variables td {
+		background: rgb(27,36,42);	
+		border-bottom: 1px solid rgba(0,0,0,0.2);		
+		color: #AAA;
+		color: rgba(255,255,255,0.65);
+		padding: 4px 8px;
+	}
+		#template_variables td.fieldOrder { text-align: center; }	
+		#template_variables td.fieldType { text-transform: capitalize; }	
+		#template_variables tfoot td { 
+			background: rgb(21,28,33);
+			background: rgba(0,0,0,0.4);
+			border-top: 1px solid #445058;
+			text-align: center; 
+		}
+			#template_variables tfoot td a { display: block; margin: 3px; }
+			
+#template_variables.accessory { padding-right: 0; overflow: hidden; }
