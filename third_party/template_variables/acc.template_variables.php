@@ -65,7 +65,7 @@ class Template_variables_acc {
 				$this->EE->load->view('snippets', $variables, TRUE);
 		}
 
-		if(empty($variables['snippets']))
+		if(empty($variables['global_variables']))
 		{
 			$this->sections[$this->EE->lang->line('global_variables')] = 
 				'<p>'.$this->EE->lang->line('no_global_variables').'</p>';
