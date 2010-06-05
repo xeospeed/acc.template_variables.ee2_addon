@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	//create tabs for custom field groups
+	// create tabs for custom field groups
 	$('#tabs').tabs();
 	$(".customFieldTable").tablesorter({
 		            headers: { 3: {sorter: false}, 4: {sorter: false} },
@@ -15,7 +15,9 @@ $(document).ready(function() {
 	$(".globalVariableTable thead th:last-child").corner("8px tr");
 	$("tfoot td").corner("8px bl br");
 	
-	pathToZeroClipboardSwf = '/themes/template_variables/scripts/ZeroClipboard.swf';
+	
+	// assign ZeroClipboard.swf path
+	// var is set in javascript code outside this file
 	ZeroClipboard.setMoviePath(pathToZeroClipboardSwf);
 
 	// setup single ZeroClipboard object for all our elements

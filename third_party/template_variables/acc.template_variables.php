@@ -174,19 +174,25 @@ class Template_variables_acc {
 	 *  
 	 */
 
- 	// Because ZeroClipboard requires an absolute path so we need to include 
+ 	// Because ZeroClipboard requires an absolute path, we need to include 
 	// our JS and the ZeroClipboard.swf in the publicly accessible themes folder.
 	// So, load_package_js is out, include_theme_js is in!
 	private function include_theme_js($file)
 	{
-		$this->EE->cp->add_to_foot('<script type="text/javascript" src="/themes/template_variables/scripts/'.$file.'.js"></script>');
+		// Need to set the path to the clipboard file
+		if($file == 'template_variables') 
+		{
+			$this->EE->cp->add_to_foot('<script type="text/javascript">pathToZeroClipboardSwf = "'.$this->EE->config->item('theme_folder_url').'template_variables/scripts/ZeroClipboard.swf";</script>');
+		}
+		
+		$this->EE->cp->add_to_foot('<script type="text/javascript" src="'.$this->EE->config->item('theme_folder_url').'template_variables/scripts/'.$file.'.js"></script>');
 	}
 	
 	// Because we're including our JS files in the themes folder, this way as well. 
 	// Credit to Brandon Kelly for this method.
 	private function include_theme_css($file)
 	{
-		$this->EE->cp->add_to_head('<link rel="stylesheet" type="text/css" href="/themes/template_variables/css/'.$file.'.css" />');
+		$this->EE->cp->add_to_head('<link rel="stylesheet" type="text/css" href="'.$this->EE->config->item('theme_folder_url').'template_variables/css/'.$file.'.css" />');
 	}
 	
 }

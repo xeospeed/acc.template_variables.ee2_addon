@@ -90,7 +90,7 @@
 	padding: 0 6px;
 	height: 22px;
 	line-height: 22px;
-	background: #27343C url(/themes/cp_themes/default/images/backgrounds_sprite.png) repeat-x 0px -79px;
+	background: #27343C url(../../cp_themes/default/images/backgrounds_sprite.png) repeat-x 0px -79px;
 	text-decoration: none;
 	font-size: 12px;
 	text-shadow:0 1px 1px #000000;
@@ -112,10 +112,11 @@
 		font-size: 11px;
 		text-decoration: uppercase;
 		background: #E11842;
-		/*border: 1px solid #445058;*/
 		white-space: nowrap;
 	}	
 		#template_variables a.copy.hover .clipTip { display: block; }
+		#template_variables a.copy.hover .clipTip:hover { display: none; }
+		
 		span.arrow {
 			position: absolute;
 			top: 0;
