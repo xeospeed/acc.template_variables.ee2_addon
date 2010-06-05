@@ -12,7 +12,7 @@ class Template_variables_acc {
 	
 	var $name			= 'Template Variables';
 	var $id				= 'template_variables';
-	var $version		= '1.01';
+	var $version		= '1.0.2';
 	var $description	= 'ExpressionEngine Custom Fields, Snippets and Global Variables';
 	var $sections		= array();
 
