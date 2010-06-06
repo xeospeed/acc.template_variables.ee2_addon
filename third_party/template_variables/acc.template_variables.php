@@ -84,7 +84,7 @@ class Template_variables_acc {
 	 *
 	 * Get array of variables
 	 *
-	 * @access	public
+	 * @access	private
 	 * @return	$variables
 	 */
 	function _get_variable_data()
