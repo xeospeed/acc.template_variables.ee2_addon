@@ -1,10 +1,6 @@
 $(document).ready(function() {
 	// create tabs for custom field groups
 	$('#tabs').tabs();
-	/*$(".customFieldTable").tablesorter({
-		            headers: { 3: {sorter: false}, 4: {sorter: false} },
-		            widgets: ["zebra"]
-	});*/
 	
 	// create rounded corners
 	$("a.copy").corner();
