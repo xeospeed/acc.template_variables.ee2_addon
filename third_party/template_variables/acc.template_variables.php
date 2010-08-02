@@ -12,7 +12,7 @@ class Template_variables_acc {
 	
 	var $name			= 'Template Variables';
 	var $id				= 'template_variables';
-	var $version		= '1.0.2';
+	var $version		= '1.1';
 	var $description	= 'ExpressionEngine Custom Fields, Snippets and Global Variables';
 	var $sections		= array();
 
@@ -23,10 +23,10 @@ class Template_variables_acc {
 	{
 		$this->EE =& get_instance();
 		$this->EE->lang->loadfile('template_variables');
-		$this->include_theme_css('template_variables');
-		$this->include_theme_js('jquery-ui-1.7.2.tabs.min');
-		$this->include_theme_js('ZeroClipboard');
-		$this->include_theme_js('template_variables');
+		$this->_include_theme_css('template_variables');
+		$this->_include_theme_js('jquery-ui-1.8.2.tabs.min');
+		$this->_include_theme_js('ZeroClipboard');
+		$this->_include_theme_js('template_variables');
 	}
 	
 	// --------------------------------------------------------------------
@@ -174,25 +174,38 @@ class Template_variables_acc {
 	 *  
 	 */
 
+	// Credit to Brandon Kelly for this method.
+	private function _theme_url()
+	{
+		if (! isset($this->cache['theme_url']))
+		{
+			$theme_folder_url = $this->EE->config->item('theme_folder_url');
+			if (substr($theme_folder_url, -1) != '/') $theme_folder_url .= '/';
+			$this->cache['theme_url'] = $theme_folder_url.'third_party/template_variables/';
+		}
+
+		return $this->cache['theme_url'];
+	}
+	
  	// Because ZeroClipboard requires an absolute path, we need to include 
 	// our JS and the ZeroClipboard.swf in the publicly accessible themes folder.
 	// So, load_package_js is out, include_theme_js is in!
-	private function include_theme_js($file)
+	private function _include_theme_js($file)
 	{
 		// Need to set the path to the clipboard file
 		if($file == 'template_variables') 
 		{
-			$this->EE->cp->add_to_foot('<script type="text/javascript">pathToZeroClipboardSwf = "'.$this->EE->config->item('theme_folder_url').'template_variables/scripts/ZeroClipboard.swf";</script>');
+			$this->EE->cp->add_to_foot('<script type="text/javascript">pathToZeroClipboardSwf = "'.$this->_theme_url().'scripts/ZeroClipboard.swf";</script>');
 		}
 		
-		$this->EE->cp->add_to_foot('<script type="text/javascript" src="'.$this->EE->config->item('theme_folder_url').'template_variables/scripts/'.$file.'.js"></script>');
+		$this->EE->cp->add_to_foot('<script type="text/javascript" src="'.$this->_theme_url().'scripts/'.$file.'.js"></script>');
 	}
 	
 	// Because we're including our JS files in the themes folder, this way as well. 
 	// Credit to Brandon Kelly for this method.
-	private function include_theme_css($file)
+	private function _include_theme_css($file)
 	{
-		$this->EE->cp->add_to_head('<link rel="stylesheet" type="text/css" href="'.$this->EE->config->item('theme_folder_url').'template_variables/css/'.$file.'.css" />');
+		$this->EE->cp->add_to_head('<link rel="stylesheet" type="text/css" href="'.$this->_theme_url().'css/'.$file.'.css" />');
 	}
 	
 }
