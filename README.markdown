@@ -6,4 +6,4 @@ Go to Addons > Accessories and click Install for Template Variables.
 
 ##Compatibility
 
-As this is an accessory, Template Variables is only compatible with ExpressionEngine 2.0 or higher.
+As this is an accessory, Template Variables is only compatible with ExpressionEngine 2.0 or higher. 
